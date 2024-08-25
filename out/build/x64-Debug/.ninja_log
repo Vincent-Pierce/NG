@@ -1,0 +1,7 @@
+# ninja log v5
+4	330	7462642024046271	src/CMakeFiles/myExecutable.dir/uniq.cpp.obj	e62eadba7a0b461c
+1	333	7462642024076302	src/CMakeFiles/myExecutable.dir/main.cpp.obj	35e67da3d056c5fc
+333	537	7462642025966283	src/myExecutable.exe	ee0ba3af8d229a2e
+1	611	7462696507908716	src/CMakeFiles/myExecutable.dir/main.cpp.obj	35e67da3d056c5fc
+5	626	7462696508068719	src/CMakeFiles/myExecutable.dir/uniq.cpp.obj	e62eadba7a0b461c
+626	812	7462696509518722	src/myExecutable.exe	ee0ba3af8d229a2e

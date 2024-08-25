@@ -1,0 +1,5 @@
+C:/Users/vinhp/Documents/NG/repos/Uniq/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/vinhp/Documents/NG/repos/Uniq/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/vinhp/Documents/NG/repos/Uniq/out/build/x64-Debug/src/CMakeFiles/myExecutable.dir
+C:/Users/vinhp/Documents/NG/repos/Uniq/out/build/x64-Debug/src/CMakeFiles/edit_cache.dir
+C:/Users/vinhp/Documents/NG/repos/Uniq/out/build/x64-Debug/src/CMakeFiles/rebuild_cache.dir
