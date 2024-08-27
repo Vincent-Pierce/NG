@@ -44,3 +44,12 @@ void * safe_realloc(char* ptr, int size) {
     return ptr;
 }
 
+FILE *safe_open(char* fileName) {
+    FILE* inFile = fopen(fileName, "r");
+    if (!inFile) {
+        perror("bad open\n");
+
+    }
+    return inFile;
+}
+
