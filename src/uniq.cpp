@@ -20,7 +20,7 @@ char *read_long_line(FILE *file) {
     buffer[count] = '\0'; 
     char* line = (char*) safe_malloc(sizeof(char)*(count+1));
     strncpy(line, buffer, (count+1));       /* include null byte */
-    free(buffer);
+    //free(buffer);
     return line;
 }
 
