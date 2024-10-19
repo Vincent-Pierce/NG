@@ -9,7 +9,7 @@ char *read_long_line(FILE *file) {
     
     character = fgetc(file);                            /* first character */
     while((character != EOF) && (character != '\n')) {
-        if(count > arraySize) {
+        if(count >= arraySize) {
             arraySize*=2;
             buffer = (char*)safe_realloc(buffer, sizeof(char)*arraySize);
         }
@@ -20,7 +20,7 @@ char *read_long_line(FILE *file) {
     buffer[count] = '\0'; 
     char* line = (char*) safe_malloc(sizeof(char)*(count+1));
     strncpy(line, buffer, (count+1));       /* include null byte */
-    //free(buffer);
+    free(buffer);
     return line;
 }
 
@@ -53,3 +53,11 @@ FILE *safe_open(char* fileName) {
     return inFile;
 }
 
+FILE* safe_write(char* fileName) {
+    FILE* outFile = fopen(fileName, "r");
+    if (!outFile) {
+        perror("bad open\n");
+
+    }
+    return outFile;
+}
