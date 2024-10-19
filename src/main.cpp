@@ -5,7 +5,7 @@ int main(int argc, char* argv[]) {
     FILE *inFile = stdin;
     FILE *outFile = stdout;
     inFile = safe_open(argv[1]);
-    //outFile = safe_write(argv[2]);
+    outFile = safe_write(argv[2]);
     char* oldLine, *newLine;
     oldLine = read_long_line(inFile); /* first line */
     fputs(oldLine, outFile);          /* or use puts(oldLine) automatically opens stream stdout */
@@ -16,6 +16,13 @@ int main(int argc, char* argv[]) {
             oldLine = newLine;
         }
         newLine = read_long_line(inFile);
+    }
+
+    if (fclose(inFile)) {
+        printf("Error closing fin");
+    }
+    if (fclose(outFile)) {
+        printf("Error closing fout");
     }
     return 0;
 }

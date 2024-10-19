@@ -57,10 +57,9 @@ FILE *safe_open(char* fileName) {
 }
 
 FILE* safe_write(char* fileName) {
-    FILE* outFile = fopen(fileName, "r");
+    FILE* outFile = fopen(fileName, "w");
     if (!outFile) {
         perror("bad open\n");
-
     }
     return outFile;
 }
