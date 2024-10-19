@@ -20,10 +20,13 @@ char *read_long_line(FILE *file) {
     if (count == 0) {
         return NULL;
     }
-    buffer[count] = '\0'; 
-    char* line = (char*) safe_malloc(sizeof(char)*(count+1));
-    strncpy(line, buffer, (count+1));       /* include null byte */
+    
+    char* line = (char*) safe_malloc(sizeof(char)*(count+2));
+
+    strncpy(line, buffer, (count+2));       /* include \n + null byte */
     free(buffer);
+    line[count] = '\n';
+    line[count+1] = '\0';
     return line;
 }
 
